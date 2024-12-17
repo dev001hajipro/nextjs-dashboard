@@ -29,7 +29,7 @@ export async function fetchRevenue() {
 }
 
 // return a random number of milliseconds from 50 to 3000.
-const ms = () => Math.floor(Math.random() * (3000 -50 + 1)) + 50;
+//const ms = () => Math.floor(Math.random() * (3000 -50 + 1)) + 50;
 
 export async function fetchLatestInvoices() {
   try {
@@ -164,7 +164,7 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
-
+    console.log("invoices:", invoice);
     return invoice[0];
   } catch (error) {
     console.error("Database Error:", error);

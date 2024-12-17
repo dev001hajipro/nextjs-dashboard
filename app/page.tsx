@@ -1,9 +1,8 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import styles from "@/app/ui/home.module.css";
-import { lusitana, noto_sans_jp } from "./ui/fonts";
-import AcmeLogo from "./ui/acme-logo";
 import Image from "next/image";
+import Link from "next/link";
+import AcmeLogo from "./ui/acme-logo";
+import { lusitana, noto_sans_jp } from "./ui/fonts";
 
 export default function Page() {
   return (
@@ -13,7 +12,6 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{" "}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
@@ -24,9 +22,13 @@ export default function Page() {
           <p className="text-xl text-gray-800 md:text-3xl md:leading-normal">
             地獄のようなフォールバックフォント。日本語を直接書いてフォントを見てみよう。
           </p>
-          <p className={`${lusitana.className}`}>Hello lusitana font❤️. I like you more than the Inter font.だけど</p>
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal ${noto_sans_jp.className}`}>
-          地獄のようなフォールバックフォント。日本語を直接書いてフォントを見てみよう。
+          <p className={`${lusitana.className}`}>
+            Hello lusitana font❤️. I like you more than the Inter font.だけど
+          </p>
+          <p
+            className={`text-xl text-gray-800 md:text-3xl md:leading-normal ${noto_sans_jp.className}`}
+          >
+            地獄のようなフォールバックフォント。日本語を直接書いてフォントを見てみよう。
           </p>
           <Link
             href="/login"
@@ -42,14 +44,14 @@ export default function Page() {
             height={760}
             className="hidden md:block"
             alt="デスクトップ版ダッシュボードプロジェクトのスクリーンショットを表示します。"
-            />
+          />
           <Image
             src="/hero-mobile.png"
             width={560}
             height={620}
             className="md:hidden"
             alt="モバイル版ダッシュボードプロジェクトのスクリーンショットを表示します。"
-            />
+          />
         </div>
       </div>
     </main>
